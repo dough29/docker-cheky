@@ -11,7 +11,7 @@ RUN wget -qO- https://github.com/just-containers/s6-overlay/releases/download/v$
 
 # Install cheky
 # (https://github.com/Blount/LBCAlerte/)
-ENV CHEKY_VER 4.1
+ENV CHEKY_VER 4.3.5
 
 ADD https://github.com/Blount/Cheky/archive/${CHEKY_VER}.tar.gz /tmp
 RUN cd /tmp && \
@@ -27,4 +27,4 @@ COPY rootfs /
 # Set s6-overlay as entrypoint
 ENTRYPOINT ["/init"]
 
-ENV CONTAINER_VERSION 2018081101
+ENV CONTAINER_VERSION 2018102101
